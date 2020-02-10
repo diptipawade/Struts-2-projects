@@ -1,0 +1,8 @@
+ <action name="add*" class="com.action.{1}Action" method="add{1}">
+ <result name="success">/add{1}.jsp</result> 
+ </action>
+ 
+
+ <action name="delete*" class="com.action.{1}Action" method="delete{1}">
+ <result name="success">/delete{1}.jsp</result> 
+ </action>

@@ -1,0 +1,16 @@
+<action name="addBook" class="com.action.BookAction" method="addBook">
+ <result name="success">/addBook.jsp</result> 
+ </action>
+ 
+ 
+<action name="deleteBook" class="com.action.BookAction" method="deleteBook">
+ <result name="success">/addBook.jsp</result> 
+ </action>
+ 
+ <action name="addMobile" class="com.action.MobileAction" method="addMobile">
+ <result name="success">/addMobile.jsp</result> 
+ </action>
+ 
+ <action name="deleteMobile" class="com.action.MobileAction" method="deleteMobile">
+ <result name="success">/deleteMobile.jsp</result> 
+ </action>
