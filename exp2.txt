@@ -1,0 +1,51 @@
+index.jsp
+
+<h2>hi</h2>
+<a href="login">login</a>
+
+login.jsp
+<s:form action="loginprocess">
+
+
+<s:textfield name="username" label="Name"></s:textfield>
+<s:password name="userpass" label="Password"></s:password>
+
+<s:submit value="login"></s:submit>
+</s:form>
+
+
+struts.jsp
+
+<action name="login">
+<result >login.jsp</result>
+</action>
+
+<action name="loginprocess" class="com.action.LoginAction">
+<result name="success"  >loginsuccess.jsp</result>
+<result name="input" >login.jsp</result>
+</action>
+
+
+LoginAction.java
+
+public void validate()
+{
+if(username.isEmpty())
+	addFieldError("username","username canot be blank");
+
+
+}
+
+public String execute(){
+	if(username.equals("admin") &&userpass.equals("0000"))
+		return "success";
+	
+	else if(username.equals("admin")){
+		addFieldError("userpass","Incorrect password");
+		return "input";
+	}
+	
+
+	}
+	}
+
